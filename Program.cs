@@ -20,9 +20,6 @@ namespace Delta_demo
             Spark = fixture.SparkFixture.Spark;
             var engine = new DeltaEngine(Spark, @"abfss://fhir@hacktrainagkae4foft2d2fy.dfs.core.windows.net/deltademo/");
 
-            Spark.Conf().Set(
-    "fs.azure.account.key.hacktrainagkae4foft2d2fy.dfs.core.windows.net",
-    "MbzDyvq/NnyLGE+tuArUwbqoDXar7kL2oDZPsClc4+ZGe5/Ie7NhkeiSex350ggHNMpX16jRljvJ+ASt3h1NYA==");
 
             //engine.CreateDataFrame(JsonConvert.DeserializeObject<Dictionary<string, object>>(File.ReadAllText(@"D:\Projects\Delta-demo\Patient.json")));
             //engine.CreateDeltaLake("abfss://fhir@hacktrainagkae4foft2d2fy.dfs.core.windows.net/smallfilestest/");
